@@ -4,10 +4,10 @@
   "license": "MIT",
   "name": "nekroze-curator",
   "operatingsystem_support": [],
-  "project_page": "",
+  "project_page": "https://github.com/Nekroze/puppet-curator",
   "requirements": [],
-  "source": "",
-  "summary": "",
-  "tags": [],
+  "source": "https://github.com/Nekroze/puppet-curator.git",
+  "summary": "Manage librarian-puppet from puppet!",
+  "tags": ['librarian', 'librarian-puppet', 'puppet'],
   "version": "0.1.0"
 }
