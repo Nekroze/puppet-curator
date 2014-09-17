@@ -12,7 +12,7 @@ class curator (
 ) inherits curator::params {
   
   package { 'librarian-puppet':
-    ensure   => '1.0.3',
+    ensure   => 'present',
     provider => 'gem',
   }
 
