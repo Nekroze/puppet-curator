@@ -24,7 +24,7 @@ mod "<%= val %>"
 <% end -%>'),
   }
 
-  exec { 'librarian-puppet install':
+  exec { '/usr/bin/librarian-puppet install':
     cwd         => "$path",
     subscribe   => File["$path/Puppetfile"],
     refreshonly => true,
