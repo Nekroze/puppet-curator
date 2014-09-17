@@ -8,6 +8,6 @@
   "requirements": [],
   "source": "https://github.com/Nekroze/puppet-curator.git",
   "summary": "Manage librarian-puppet from puppet!",
-  "tags": ['librarian', 'librarian-puppet', 'puppet'],
-  "version": "0.1.0"
+  "tags": ["librarian", "librarian-puppet", "puppet"],
+  "version": "0.1.1"
 }

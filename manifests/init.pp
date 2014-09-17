@@ -16,14 +16,17 @@ class curator (
     provider => 'gem',
   }
 
-  file { '$path/Puppetfile':
+  file { "$path/Puppetfile":
     ensure  => file,
-    content => template('Puppetfile.erb'),
+    content => inline_template('forge "https://forgeapi.puppetlabs.com"
+<% @modules.each do |val| -%>
+mod "<%= val %>"
+<% end -%>'),
   }
 
   exec { 'librarian-puppet install':
-    cwd         => '$path',
-    subscribe   => File['$path/Puppetfile'],
+    cwd         => "$path",
+    subscribe   => File["$path/Puppetfile"],
     refreshonly => true,
     require     => Package['librarian-puppet'],
   }
