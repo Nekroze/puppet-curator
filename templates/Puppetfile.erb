@@ -1,0 +1,10 @@
+forge <%= @forge_url %>
+
+## List of modules managed by Puppet
+<% @modules.each do |module_name, attributes| -%>
+<% version = attributes.delete('version') -%>
+mod <%= "'#{module_name}'" %><%= ", \"#{version}\"" if !version.nil? %><%= "," if !attributes.empty? %>
+<% attributes.each_with_index do |(attr, value), index| -%>
+  :<%= "#{attr} => " %>"<%= "#{value}" %>"<%= "," if index < attributes.length - 1 %>
+<% end -%>
+<% end -%>
